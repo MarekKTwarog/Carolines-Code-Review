@@ -24,6 +24,8 @@ digits <- as.numeric(unlist(strsplit(as.character(answer), "")))
 narcissistic <- sum(digits^3)
 narcissistic1 <- answer == narcissistic
 
+# Confirm whether or not input is a narcissistic number or not 
+
 if (narcissistic1) {print(paste(answer, "is a narcissistic number"))} else 
 { print(paste(answer, "is not a narcissistic number"))
 }
