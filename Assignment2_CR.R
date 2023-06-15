@@ -12,7 +12,6 @@ if (is.na(as.integer(answer))) {
 
 # Convert input into integer
 answer <- as.integer(answer)
-
 # Check if number is 3 digits, if not, print error message and quit
 # This will also ensure that number is a positive integer
 if (answer < 100 || answer > 999) {
@@ -26,8 +25,12 @@ digits <- as.numeric(unlist(strsplit(as.character(answer), "")))
 # Sum the cube of each sub string
 narcissistic <- sum(digits^3)
 narcissistic1 <- answer == narcissistic
+#NOTE:I like the use of the unlist() function which rids you of having to reference the list using [[1]] at the end of your code string
+#NOTE:I also like your use of just one variables to help determine whether the original answer is equivalent to the sum of cubes of that number, well done.
 
 # Confirm whether or not input is a narcissistic number
 if (narcissistic1) {print(paste(answer, "is a narcissistic number"))} else 
 { print(paste(answer, "is not a narcissistic number"))
 }
+#NOTE: Overall well done, code is easy to read, with good use of functions to complete the task.
+
