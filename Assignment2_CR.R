@@ -8,6 +8,7 @@ if (is.na(as.integer(answer))) {
   print ("Error: Input not numeric") 
   quit(save = "no")
   }
+#NOTE: Good use of is.na function, could have also just used quit(), instead of quit(save = "no") for simplicity
 
 # Convert input into integer
 answer <- as.integer(answer)
@@ -18,6 +19,7 @@ if (answer < 100 || answer > 999) {
   print("Error: Number is not three-digits.") 
   quit (save = "no")
 }
+#NOTE: Good use of operand to check for values including more or less than 3 digits
 
 # Use strsplit to split elements of the vector into substrongs. 
 digits <- as.numeric(unlist(strsplit(as.character(answer), "")))
