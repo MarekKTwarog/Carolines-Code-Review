@@ -15,7 +15,7 @@
 
 #' Prepare a dictionary of words to choose from and save in a txt file
 #' Upload dictionary to working directory 
-dictionary <- readLines("dictionary.txt")
+dictionary <- readLines("WordsHangMan.txt")
 #REVIEW NOTE: I like that you made it so that anyone can use their own dictionary
 #'to play a more personalized game. The scan function can also be used instead of readLines()
 #'that way you dont get error messages if your text file has gaps in between words.
@@ -39,7 +39,7 @@ print("You have 5 tries.")
 guessed_letters <- vector("character", nchar(secret_word))
 guessed_letters[] <- "_"
 tries <- 0
-max_tries <- 5
+max_tries <- 50
 
 
 
@@ -103,11 +103,11 @@ while ("_" %in% guessed_letters) {
     }
   }
 }
-
 # If user guesses the secret word, inform them
 if (!("_" %in% guessed_letters)) {
   cat("Amazing! You've guessed the secret word:", secret_word)
 }  
+
 
 #CODE REVIEW NOTES:
 #' No line of code that allows for capital letters to count as correct guesses, 
@@ -143,7 +143,13 @@ if (!("_" %in% guessed_letters)) {
 #' line earlier in the code that checks if the user input the entire word then
 #' it would supersede the other code and would generate the congratulations message
 #' 
-#' 
+#' Changing line 39 to: guessed_letters <- vector("character", characters)
+#' and changing line 107 to: if (all(guessed_letters != "_")) {
+#.   cat("Amazing! You've guessed the secret word:", secret_word)
+#.  break
+#}
+#}
+#will fix the problem.
 #' Overall the code was well done but the congratulations message needs to be fine
 #' tuned, the code was very clean, the comments were also very clean and concise.
 #' Most importantly the game worked as it should other than th game not recognizing
