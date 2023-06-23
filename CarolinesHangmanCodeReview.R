@@ -139,6 +139,11 @@ if (!("_" %in% guessed_letters)) {
 #' One thing that could be changed is the variable for your secret word showing up
 #' in the environment pane and exposing the secret word.
 #' 
+#' To combat the issue with the congratulations not being printed, could add a 
+#' line earlier in the code that checks if the user input the entire word then
+#' it would supersede the other code and would generate the congratulations message
+#' 
+#' 
 #' Overall the code was well done but the congratulations message needs to be fine
 #' tuned, the code was very clean, the comments were also very clean and concise.
 #' Most importantly the game worked as it should other than th game not recognizing
