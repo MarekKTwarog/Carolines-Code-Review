@@ -1,3 +1,6 @@
+
+########CODE REVIEW ALL THE WAY AT THE BOTTOM OF SCRIPT############
+
 # Assignment 3 - Hangman
 
 #' Project plan
